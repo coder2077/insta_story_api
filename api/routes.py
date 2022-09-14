@@ -43,7 +43,7 @@ def pass_sms_code(
 
 @router.get("/set/proxy")
 def set_proxy(
-	dsn: str = None, secret_key: str | None = Header(default=None)
+	dsn: str = '', secret_key: str | None = Header(default=None)
 ):
 	""" Set proxy for client """
 	json_response = api.set_proxy(dsn=dsn)

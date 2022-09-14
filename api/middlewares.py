@@ -13,7 +13,7 @@ class MyMiddleware:
 			return await call_next(request)
 
 		token = request.headers.get('secret-key')
-		if token == config.key.secret:
+		if token != config.key.secret:
 			return JSONResponse(
 				status_code=401,
 				content={

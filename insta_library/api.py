@@ -25,13 +25,15 @@ class InstagramAPI():
 			if data == True:
 				json_response = {
 					'error': False, 
-					'response': 'Logged in successfully', 
+					'message': 'Logged in successfully', 
+					'response': self.client.get_settings(), 
 				}
 				return json_response
 			else:
 				json_response = {
 					'error': True, 
-					'response': 'Login failed', 
+					'message': 'Login failed', 
+					'response': self.client.get_settings(), 
 				}
 				return json_response
 
