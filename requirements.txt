@@ -1,0 +1,4 @@
+fastapi
+instagrapi
+redis
+uuid
